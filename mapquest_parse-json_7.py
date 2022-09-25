@@ -46,6 +46,7 @@ while True:
        print("Trip Duration:   " + (json_data["route"]["formattedTime"]))
        print("Kilometers:      " + str("{:.2f}".format((json_data["route"]["distance"])*1.61)))
        print("Fuel Used (Liter): " + str("{:.2f}".format((json_data["route"]["fuelUsed"])*3.78)))
+       print("Fuel Cost (USD): " + str("{:.2f}".format((json_data["route"]["fuelUsed"])*3.78*(1.038))))
        print("                                              ")
        print("=============================================")
    elif json_status == 402:
