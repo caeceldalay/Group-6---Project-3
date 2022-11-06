@@ -39,7 +39,7 @@ while True:
         break
    url = main_api + urllib.parse.urlencode({"key": key, "from":orig, "to":dest})
 
-   print(Fore.GREEN + "URL: " + (url))
+   print(Fore.RED + "URL: " + (url))
 
    json_data = requests.get(url).json()
 
