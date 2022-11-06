@@ -41,7 +41,7 @@ while True:
         "to": dest
     })
 
-    print(Fore.RED + "URL: " + (url))
+    print(Fore.GREEN + "URL: " + (url))
 
     json_data = requests.get(url).json()
 
@@ -68,9 +68,9 @@ while True:
         print(Fore.GREEN + "Kilometers:      " +
               str("{:.2f}".format((json_data["route"]["distance"]) * 1.61)))
         print(Fore.GREEN + "Fuel Used (Liter): " +
-              str("{:.2f}".format((json_data["route"]["fuelUsed"]) * 3.78)))
+              str("{:.2f}".format((json_data["route"]["distance"]) * 3.78)))
         print(Fore.GREEN + "Fuel Cost (USD): " +
-              str("{:.2f}".format((json_data["route"]["fuelUsed"]) * 3.78 *
+              str("{:.2f}".format((json_data["route"]["distance"]) * 3.78 *
                                   (1.038))))
         print("                                              ")
         print(Fore.RED + "=============================================")
